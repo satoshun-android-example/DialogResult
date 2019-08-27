@@ -10,6 +10,7 @@ import androidx.lifecycle.observe
 import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.DialogActBinding
 
+// not working case when re-create Activity
 class DialogP2Activity : AppCompatActivity() {
   private lateinit var binding: DialogActBinding
 
