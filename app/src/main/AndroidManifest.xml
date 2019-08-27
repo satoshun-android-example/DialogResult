@@ -26,5 +26,6 @@
 
     <activity android:name=".p1.DialogP1Activity" />
     <activity android:name=".p2.DialogP2Activity" />
+    <activity android:name=".p3.DialogP3Activity" />
   </application>
 </manifest>

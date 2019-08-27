@@ -55,6 +55,9 @@ dependencies {
   implementation VIEWMODEL
   implementation LIFECYCLE_RUNTIME
 
+  implementation NAVIGATION
+  implementation NAVIGATION_UI
+
   implementation GLIDE
 
   implementation COROUTINE
