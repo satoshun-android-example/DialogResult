@@ -39,9 +39,9 @@ sealed class P2DialogFragmentData(val tag: String?) {
 }
 
 class P2DialogFragmentViewModel : ViewModel() {
-  val data = MutableLiveData<P2DialogFragmentData>()
+  val data = MutableLiveData<Event<P2DialogFragmentData>>()
 
   fun sendData(data: P2DialogFragmentData) {
-    this.data.value = data
+    this.data.value = Event(data)
   }
 }

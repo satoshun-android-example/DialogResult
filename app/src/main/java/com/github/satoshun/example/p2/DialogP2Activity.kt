@@ -27,7 +27,7 @@ class DialogP2Activity : AppCompatActivity() {
 
 fun DialogFragment.show(activity: AppCompatActivity, tag: String, body: () -> Unit) {
   val dialogViewModel: P2DialogFragmentViewModel by activity.viewModels()
-  dialogViewModel.data.observe(this) {
+  dialogViewModel.data.observeUnhandledEvent(this) {
     if (it.tag == tag) body()
   }
 
