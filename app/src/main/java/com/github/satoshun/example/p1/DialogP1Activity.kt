@@ -20,11 +20,15 @@ class DialogP1Activity : AppCompatActivity() {
 
     binding.start.setOnClickListener {
       P1DialogFragment()
-        .show(supportFragmentManager, "hoge")
+        .show(supportFragmentManager, "p1")
     }
 
     dialogViewModel.data.observe(this) {
-      Toast.makeText(this@DialogP1Activity, "hoge", Toast.LENGTH_LONG).show()
+      when {
+        it.tag == "p1" -> {
+          Toast.makeText(this@DialogP1Activity, "p1", Toast.LENGTH_LONG).show()
+        }
+      }
     }
   }
 }

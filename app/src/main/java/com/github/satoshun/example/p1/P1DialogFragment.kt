@@ -29,14 +29,14 @@ class P1DialogFragment : DialogFragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.finish.setOnClickListener {
-      dialogViewModel.sendData(P1DialogFragmentData.Click)
+      dialogViewModel.sendData(P1DialogFragmentData.Click(tag))
       dismiss()
     }
   }
 }
 
-sealed class P1DialogFragmentData {
-  object Click : P1DialogFragmentData()
+sealed class P1DialogFragmentData(val tag: String?) {
+  class Click(tag: String?) : P1DialogFragmentData(tag)
 }
 
 class P1DialogFragmentViewModel : ViewModel() {
